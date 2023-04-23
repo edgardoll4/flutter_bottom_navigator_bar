@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BasicDesignScreen extends StatelessWidget {
-  const BasicDesignScreen({super.key});
+class BasicDesignView extends StatelessWidget {
+  const BasicDesignView({super.key});
 
   @override
   Widget build(BuildContext context) {

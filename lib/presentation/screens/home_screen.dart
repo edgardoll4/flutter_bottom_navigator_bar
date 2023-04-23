@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../views/basic_design_view.dart';
+import '../views/exit_view.dart';
 import '../views/home_view.dart';
+import '../views/home_view_card.dart';
+import 'scroll_design.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -14,6 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
+    final List<Widget> selectScreen = [
+      HomeViewCard(),
+      HomeView(),
+      BasicDesignView(),
+      ExitView()
+    ];
     return Scaffold(
       appBar: AppBar(
         // excludeHeaderSemantics: true,
@@ -29,7 +39,10 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      body: HomeView(),
+      body: IndexedStack(
+        index: selectIndex,
+        children: selectScreen,
+      ),
       bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.shifting,
           currentIndex: selectIndex,

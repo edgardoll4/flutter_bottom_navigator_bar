@@ -15,7 +15,7 @@ class _ExitView extends State<ExitView> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Conteo principal: $conteo'),
+          Text('Conteo final: $conteo'),
           FilledButton.tonal(
             onPressed: () {
               setState(() {
