@@ -19,9 +19,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     final List<Widget> selectScreen = [
-      HomeViewCard(),
       HomeView(),
       BasicDesignView(),
+      ScrollScreen(),
+      HomeViewCard(),
       ExitView()
     ];
     return Scaffold(
@@ -60,8 +61,13 @@ class _HomeScreenState extends State<HomeScreen> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.list),
                 activeIcon: Icon(Icons.shape_line),
-                label: 'List',
+                label: 'Design',
                 backgroundColor: colors.secondary),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.arrow_downward),
+                activeIcon: Icon(Icons.recycling),
+                label: 'Page Scroll',
+                backgroundColor: colors.error),
             BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
                 activeIcon: Icon(Icons.settings_accessibility),
