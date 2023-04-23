@@ -8,9 +8,10 @@ class ExitView extends StatefulWidget {
 }
 
 class _ExitView extends State<ExitView> {
+  int conteo = 0;
+
   @override
   Widget build(BuildContext context) {
-    int conteo = 0;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

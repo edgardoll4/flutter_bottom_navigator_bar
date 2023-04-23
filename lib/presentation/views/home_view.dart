@@ -8,9 +8,10 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  int conteo = 0;
+
   @override
   Widget build(BuildContext context) {
-    int conteo = 0;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
